@@ -1,0 +1,4 @@
+echo "hello"
+echo "today is `date`"
+hi
+hi
