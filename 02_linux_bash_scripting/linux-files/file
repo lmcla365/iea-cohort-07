@@ -1,7 +1,40 @@
-1-2-3		da		hello-bye	out		temp3665
-123		err		lc		piat		unsorted-file
-abc		file		lc2		poem		words
-amend1		foo.sorted	lc3		poem-diff
-amend1.1	foo.txt		nu		somedir
-bar.txt		h,v		num		sorted-file
-blahblah	hamlet.txt	one.tao		source1
+123
+1-2-3
+a
+abc
+amend1
+amend1.1
+amend1.1.words
+amend1.words
+b
+bar.txt
+blahblah
+da
+echostart
+err
+file
+filename
+find_me.sh
+foo1
+foo.sorted
+foo.txt
+hamlet.txt
+hello-bye
+h,v
+if_x
+lc
+lc2
+lc3
+nu
+num
+one.tao
+out
+piat
+poem
+poem-diff
+somedir
+sorted-file
+source1
+temp3665
+unsorted-file
+words

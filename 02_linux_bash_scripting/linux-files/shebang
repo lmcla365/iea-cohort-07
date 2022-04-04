@@ -1,0 +1,5 @@
+#!/bin/bash
+source setvars
+cat $* | wc -l
+echo $TEST
+
