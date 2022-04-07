@@ -4,7 +4,12 @@ import datetime
 import time
 import calendar
 
-MM, DD = input('Enter you bday in MM DD format: ').split()
+MM, DD = input('Enter your bday in MM DD format: ').split()
+
+#test for digit input
+if not MM.isdigit() or not DD.isdigit():
+    print("Invalid input")
+    exit()
 
 #set variables to int
 mm=int(time.strftime('%m'))
@@ -13,6 +18,10 @@ yy=int(time.strftime('%Y'))
 MM=int(MM)
 DD=int(DD)
 counter=0
+
+if (MM > 12 or MM < 1) or (DD < 1 or DD > 31) or (MM == 4 or MM == 6 or MM == 9 or MM == 11 and DD > 30) or (MM == 4 and DD > 29):
+    print("Invalid input")
+    exit()
 
 #account for upcoming birthdays in year
 if MM > mm or MM == mm and DD > dd:
