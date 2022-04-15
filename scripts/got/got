@@ -1,0 +1,27 @@
+#!/bin/bash -f
+
+pwd=`pwd`
+
+case $1 in
+
+add)
+    if [ $2 == "*" ]; then
+    	fadd=""
+    else
+	fadd=" -name $2"
+    fi
+    for file in $(du -a| awk '{print $2}');do
+	    sha=$(sha1sum $file 2>/dev/null | awk '{print $2}' 2>/dev/null)
+	    mime=$(file --mime-type $file  2>/dev/null | awk {print $2} 2>/dev/null)
+	    updt=$(stat -c %Y $file)
+	    echo $file $file $mime $updt $sha	
+	    done
+esac
+
+#    find -type f $fadd -not -path './.got*' | xargs sha1sum  > .got/got_index
+#    cat .got/got_index | while read -r line; do 
+#    read sha file <<< $(echo $line | awk '{ print $1" "$2 }') 
+#    ln $file .got/objects/$sha  
+# ; print $pwd/src $pwd/".got/objects/"dst}" #| xargs ln {}
+#    	echo $sha $file
+#	done

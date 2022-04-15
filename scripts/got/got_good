@@ -1,0 +1,17 @@
+#!/bin/bash -f
+
+case $1 in
+
+add)
+#if [ $1 == add ]; then
+	if [ $2 == "*" ]; then
+		fadd=""
+	else
+		fadd=" -name $2"
+	fi
+find -type f $fadd | xargs sha1sum >> .got_index
+sort .got_index | uniq > .tmp && mv .tmp .got_index
+for sha1 in $(cat .got_index | awk '{print $2}'); do
+	echo $sha1
+done
+esac
