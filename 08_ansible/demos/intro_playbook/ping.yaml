@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars:
+    my_message: Hello World!
+  tasks:
+    - name: Check connectivity for my host
+      ping:
+    - name: Print out a user message
+      debug:
+        msg: "{{ my_message }} {{ ansible_facts['hostname'] }} at {{ ansible_facts['default_ipv4']['address'] }}"

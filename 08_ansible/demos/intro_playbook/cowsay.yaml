@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Install the cowsay package
+      become: yes
+      apt:
+        name: cowsay
+        state: "{{ state }}"
+    - name: Test the cowsay command
+      command: cowsay This definitely works. Moo!

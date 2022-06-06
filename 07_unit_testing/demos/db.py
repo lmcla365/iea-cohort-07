@@ -3,9 +3,9 @@ import os
 
 def get_database_host():
     host = os.getenv("DATABASE_HOST")
-    if host is None or host == "":
+    if not host:
         return None
-    return "mysql://" + host
+    return f"mysql://{host}"
 
 
 

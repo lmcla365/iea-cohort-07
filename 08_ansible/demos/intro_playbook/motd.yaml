@@ -1,0 +1,8 @@
+---
+- hosts: environments
+  tasks:
+    - name: Copy the message of the day
+      become: yes
+      template:
+        src: motd
+        dest: /etc/motd
