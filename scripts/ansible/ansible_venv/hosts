@@ -1,0 +1,11 @@
+[db]
+threefour ansible_host=34.148.87.20 ansible_password=Beckrich
+threefive ansible_host=35.196.81.34 ansible_password=Beckrich
+
+[web]
+threefour ansible_host=34.148.87.20 ansible_password=Beckrich
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=ubuntu
+ansible_ssh_pass=Beckrich
